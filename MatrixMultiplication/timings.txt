@@ -1,0 +1,83 @@
+Size: 2
+Naive -  Time taken: 0.000002
+Recursive -  Time taken: 0.000002
+Recursive multithreaded -  Time taken: 0.000002
+Strassen -  Time taken: 0.000002
+Strassen multithreaded -  Time taken: 0.000001
+
+Size: 4
+Naive -  Time taken: 0.000002
+Recursive -  Time taken: 0.000002
+Recursive multithreaded -  Time taken: 0.000002
+Strassen -  Time taken: 0.000002
+Strassen multithreaded -  Time taken: 0.000002
+
+Size: 8
+Naive -  Time taken: 0.000011
+Recursive -  Time taken: 0.000005
+Recursive multithreaded -  Time taken: 0.000004
+Strassen -  Time taken: 0.000004
+Strassen multithreaded -  Time taken: 0.000004
+
+Size: 16
+Naive -  Time taken: 0.000020
+Recursive -  Time taken: 0.000077
+Recursive multithreaded -  Time taken: 0.000020
+Strassen -  Time taken: 0.000107
+Strassen multithreaded -  Time taken: 0.000019
+
+Size: 32
+Naive -  Time taken: 0.000141
+Recursive -  Time taken: 0.000641
+Recursive multithreaded -  Time taken: 0.000143
+Strassen -  Time taken: 0.000687
+Strassen multithreaded -  Time taken: 0.000129
+
+Size: 64
+Naive -  Time taken: 0.000298
+Recursive -  Time taken: 0.001523
+Recursive multithreaded -  Time taken: 0.000301
+Strassen -  Time taken: 0.001471
+Strassen multithreaded -  Time taken: 0.000301
+
+Size: 128
+Naive -  Time taken: 0.002772
+Recursive -  Time taken: 0.011467
+Recursive multithreaded -  Time taken: 0.001549
+Strassen -  Time taken: 0.015894
+Strassen multithreaded -  Time taken: 0.000831
+
+Size: 256
+Naive -  Time taken: 0.018432
+Recursive -  Time taken: 0.109150
+Recursive multithreaded -  Time taken: 0.007169
+Strassen -  Time taken: 0.096020
+Strassen multithreaded -  Time taken: 0.005245
+
+Size: 512
+Naive -  Time taken: 0.163349
+Recursive -  Time taken: 0.844396
+Recursive multithreaded -  Time taken: 0.038410
+Strassen -  Time taken: 0.626527
+Strassen multithreaded -  Time taken: 0.021883
+
+Size: 1024
+Naive -  Time taken: 1.269086
+Recursive -  Time taken: 6.761262
+Recursive multithreaded -  Time taken: 0.219763
+Strassen -  Time taken: 4.295183
+Strassen multithreaded -  Time taken: 0.143503
+
+Size: 2048
+Naive -  Time taken: 10.259739
+Recursive -  Time taken: 55.902927
+Recursive multithreaded -  Time taken: 1.918268
+Strassen -  Time taken: 31.202361
+Strassen multithreaded -  Time taken: 1.054637
+
+Size: 4096
+Naive -  Time taken: 80.982925
+Recursive -  Time taken: 447.626266
+Recursive multithreaded -  Time taken: 14.942704
+Strassen -  Time taken: 219.820459
+Strassen multithreaded -  Time taken: 6.970050
