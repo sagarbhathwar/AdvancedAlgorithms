@@ -2,12 +2,14 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <set>
 #include <algorithm>
+#include <chrono>
 #include "string_utils.h"
 
 using namespace std;
 
-int main()
+int main(int argc, char** argv)
 {
 	//read file
 	ifstream file("AESOP_TALES.txt");
@@ -25,11 +27,7 @@ int main()
 
 	//removing links for HTTP
 	string pattern = "http";
-	int m = pattern.size();
-	vector<vector<int>> transition_table(m + 1, vector<int>(ALPHABET, 0));
-
-	compute_transition_function(pattern, transition_table);
-	std::vector<int> indices = finite_automaton_matcher(text, transition_table, m);
+	std::vector<int> indices = finite_automaton_matcher(text, pattern);
 
 	/* Remove the links here */
 	for (int i : indices)
@@ -45,11 +43,7 @@ int main()
 
 	//remove links for FTP
 	pattern = "ftp";
-	m = pattern.size();
-	transition_table = vector<vector<int>>(m + 1, vector<int>(ALPHABET, 0));
-
-	compute_transition_function(pattern, transition_table);
-	indices = finite_automaton_matcher(text, transition_table, m);
+	indices = finite_automaton_matcher(text, pattern);
 	for (int i : indices)
 	{
 		int j = 0;
@@ -64,4 +58,11 @@ int main()
 	ofstream op_file("AESOP_TALES_CLEANED.txt");
 	op_file.write(text.c_str(), text.size());
 
+	cout << find_length_of_text("AESOP_TALES.txt") << endl;
+
+	indices = find_pattern(text, "night", 0, text.size(), kmp);
+
+	for_each(indices.begin(), indices.end(), [](auto x) {cout << x << endl; });
+
+	cout << indices.size() << endl;
 }
