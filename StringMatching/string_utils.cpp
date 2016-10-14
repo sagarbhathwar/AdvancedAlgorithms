@@ -46,8 +46,8 @@ vector<vector<int>> compute_transition_function(const string& pattern)
 std::vector<int> finite_automaton_matcher(const std::string& text, const std::string& pattern)
 {
 	int m = pattern.size();
-	vector<vector<int>> transition_table = compute_transition_function(pattern); 
-	
+	vector<vector<int>> transition_table = compute_transition_function(pattern);
+
 	int q = 0;
 	std::vector<int> res;
 	for (int i = 0; i < text.size(); ++i)
@@ -78,10 +78,10 @@ vector<int> rabin_karp(const string& text, const string& pattern, int d, int q)
 		if (p == t)
 		{
 			int j = 0;
-			while (j < m && pattern[j] == text[s + j]) 
+			while (j < m && pattern[j] == text[s + j])
 				++j;
 
-			if (j == m) 
+			if (j == m)
 				indices.push_back(s);
 		}
 		if (s < n - m - 1)

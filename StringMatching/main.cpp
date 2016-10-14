@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <chrono>
 #include "string_utils.h"
+#include "suffix_tree.h"
 
 using namespace std;
 
@@ -65,4 +66,7 @@ int main(int argc, char** argv)
 	for_each(indices.begin(), indices.end(), [](auto x) {cout << x << endl; });
 
 	cout << indices.size() << endl;
+
+	SuffixTree suffix_tree("abcababbababccbababbabcbbabbababbababababababbbabb");
+	suffix_tree.print_tree();
 }
